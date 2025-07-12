@@ -59,7 +59,7 @@ licenseKey: 'YOUR_PURCHASED_KEY'
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>SummarizerJS Demo</title>
+  <title>SummarizerDM Demo</title>
   <style>
     body {
       font-family: sans-serif;
@@ -89,7 +89,7 @@ licenseKey: 'YOUR_PURCHASED_KEY'
 </head>
 <body>
 
-  <h2>SummarizerJS – Test Page</h2>
+  <h2>SummarizerDM – Test Page</h2>
 
   <label for="textInput">Enter your text:</label>
   <textarea id="textInput" rows="10" placeholder="Paste a long text here..."></textarea>
