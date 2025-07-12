@@ -104,6 +104,7 @@ The quick brown fox jumps over the lazy dog. According to recent studies, foxes 
       outputId: 'summaryResult',
       sliderId: 'detailLevel',
       buttonId: 'summarizeBtn',
+      licenseKey: 'YOUR_LICENSE_KEY'
   </script>
 </body>
 </html>
