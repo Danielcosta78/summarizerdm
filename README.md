@@ -4,7 +4,6 @@ SummarizerDM is a lightweight JavaScript library that transforms long texts into
 
 ## Features
 
-- Simple text summarization algorithm
 - Adjustable summary length
 - Client-side processing (no server calls)
 - Easy integration via CDN
