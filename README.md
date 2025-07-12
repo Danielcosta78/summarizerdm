@@ -39,24 +39,6 @@ Summarizer.initialize({
 });
 ```
 
-## Configuration Options
-
-| Option     | Required | Description                                                                 |
-|------------|----------|-----------------------------------------------------------------------------|
-| `inputId`  | Yes      | ID of the textarea element containing the text to summarize                 |
-| `outputId` | Yes      | ID of the element where the summary will be displayed                       |
-| `sliderId` | No       | ID of the range input controlling summary length (10-90%)                   |
-| `buttonId` | No       | ID of the button that triggers summarization (omit for auto-update)         |
-| `licenseKey` | No    | License key to remove "Summarized by SummarizerDM" watermark                |
-
-## How It Works
-
-1. Splits text into sentences
-2. Analyzes word frequency (focusing on words with 4+ characters)
-3. Scores sentences based on important word frequency
-4. Selects top sentences according to the specified percentage
-5. Preserves original sentence order in the output
-
 ## License Options
 
 The free version includes a "Summarized by SummarizerDM" watermark. To remove:
@@ -73,18 +55,55 @@ licenseKey: 'YOUR_PURCHASED_KEY'
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://cdn.jsdelivr.net/gh/Danielcosta78/summarizerdm@main/cdn/summarizerdm.js"></script>
+  <title>My Summarization App</title>
+  <style>
+    /* Recommended styling for optimal UX */
+    textarea, #summaryResult {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: sans-serif;
+    }
+    #summaryResult {
+      background: #f9f9f9;
+      margin-top: 20px;
+      min-height: 100px;
+    }
+    .controls {
+      margin: 15px 0;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
-  <textarea id="myTextarea" rows="10">Long text to summarize...</textarea>
-  <div id="summaryResult"></div>
+  <h1>Document Summarizer</h1>
   
+  <textarea id="myTextarea" rows="10" placeholder="Paste your article or document here...">
+The quick brown fox jumps over the lazy dog. According to recent studies, foxes demonstrate remarkable adaptability in urban environments. Canine behavior experts note dogs often underestimate fox intelligence. This dynamic illustrates classic predator-prey relationships in modern ecosystems.
+  </textarea>
+  
+  <div class="controls">
+    <button id="summarizeBtn">Generate Summary</button>
+    <label>
+      Detail: 
+      <input type="range" id="detailLevel" min="10" max="90" value="50">
+      <span id="percentValue">50%</span>
+    </label>
+  </div>
+  
+  <div id="summaryResult"></div>
+
+  <script src="https://cdn.jsdelivr.net/gh/Danielcosta78/summarizerdm@main/cdn/summarizerdm.min.js"></script>
   <script>
+    // Initialize with advanced configuration
     Summarizer.initialize({
       inputId: 'myTextarea',
       outputId: 'summaryResult',
-      licenseKey: 'PAID_LICENSE_KEY'
-    });
+      sliderId: 'detailLevel',
+      buttonId: 'summarizeBtn',
   </script>
 </body>
 </html>
