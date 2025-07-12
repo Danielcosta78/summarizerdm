@@ -52,58 +52,63 @@ licenseKey: 'YOUR_PURCHASED_KEY'
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Summarization App</title>
+  <meta charset="UTF-8">
+  <title>SummarizerJS Demo</title>
   <style>
-    /* Recommended styling for optimal UX */
-    textarea, #summaryResult {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+    body {
       font-family: sans-serif;
-    }
-    #summaryResult {
       background: #f9f9f9;
-      margin-top: 20px;
-      min-height: 100px;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
     }
-    .controls {
-      margin: 15px 0;
-      display: flex;
-      gap: 15px;
-      align-items: center;
+    textarea, input[type="range"], button {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    #summaryOutput {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff;
+      border: 1px solid #ccc;
+      white-space: pre-wrap;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 20px;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <h1>Document Summarizer</h1>
-  
-  <textarea id="myTextarea" rows="10" placeholder="Paste your article or document here...">
-The quick brown fox jumps over the lazy dog. According to recent studies, foxes demonstrate remarkable adaptability in urban environments. Canine behavior experts note dogs often underestimate fox intelligence. This dynamic illustrates classic predator-prey relationships in modern ecosystems.
-  </textarea>
-  
-  <div class="controls">
-    <button id="summarizeBtn">Generate Summary</button>
-    <label>
-      Detail: 
-      <input type="range" id="detailLevel" min="10" max="90" value="50">
-      <span id="percentValue">50%</span>
-    </label>
-  </div>
-  
-  <div id="summaryResult"></div>
 
-  <script src="https://cdn.jsdelivr.net/gh/Danielcosta78/summarizerdm@main/cdn/summarizerdm.min.js"></script>
+  <h2>SummarizerJS – Test Page</h2>
+
+  <label for="textInput">Enter your text:</label>
+  <textarea id="textInput" rows="10" placeholder="Paste a long text here..."></textarea>
+
+  <label for="summaryLevel">Summary level (% of original): <span id="percentLabel">20</span>%</label>
+  <input type="range" id="summaryLevel" min="10" max="90" value="20" step="10" 
+         oninput="document.getElementById('percentLabel').textContent = this.value">
+
+  <button id="summarizeBtn">Summarize</button>
+
+  <div id="summaryOutput">The summary will appear here...</div>
+
+  <script
+    src="https://cdn.jsdelivr.net/gh/Danielcosta78/summarizerdm@main/cdn/summarizerdm.js">
+  </script>
   <script>
-    // Initialize with advanced configuration
     Summarizer.initialize({
-      inputId: 'myTextarea',
-      outputId: 'summaryResult',
-      sliderId: 'detailLevel',
+      inputId: 'textInput',
+      outputId: 'summaryOutput',
+      sliderId: 'summaryLevel',
       buttonId: 'summarizeBtn',
-      licenseKey: 'YOUR_LICENSE_KEY'
+      licenseKey: 'REMOVE-WATERMAR' // Optional: use 'REMOVE-WATERMARK' to hide attribution
+    });
   </script>
 </body>
 </html>
