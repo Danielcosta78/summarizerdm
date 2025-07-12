@@ -42,7 +42,7 @@ Summarizer.initialize({
 
 The free version includes a "Summarized by SummarizerDM" watermark. To remove:
 
-1. Purchase a license key from [Buy](www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X287KB44TC2PW&currency_code=USD)
+1. Purchase a license key from [Buy](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=X287KB44TC2PW&currency_code=USD)
 2. Include it in your configuration:
 ```javascript
 licenseKey: 'YOUR_PURCHASED_KEY'
