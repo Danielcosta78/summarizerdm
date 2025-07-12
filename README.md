@@ -11,7 +11,7 @@ SummarizerDM is a lightweight JavaScript library that transforms long texts into
 
 ## CDN Installation
 
-Add this script to your HTML file's `<head>` section:
+Add this script to HTML:
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/Danielcosta78/summarizerdm@main/cdn/summarizerdm.js"></script>
