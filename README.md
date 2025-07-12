@@ -113,4 +113,4 @@ The quick brown fox jumps over the lazy dog. According to recent studies, foxes 
 ## Support
 
 For issues, feature requests, or enterprise solutions:
-- [GitHub Repository](https://github.com/Danielcosta78/summarizerdm)
+- [GitHub](https://github.com/Danielcosta78/)
