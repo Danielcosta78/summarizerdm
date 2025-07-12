@@ -107,7 +107,7 @@ licenseKey: 'YOUR_PURCHASED_KEY'
       outputId: 'summaryOutput',
       sliderId: 'summaryLevel',
       buttonId: 'summarizeBtn',
-      licenseKey: 'REMOVE-WATERMAR' // Optional: use 'REMOVE-WATERMARK' to hide attribution
+      licenseKey: 'REMOVE-WATERMAR'
     });
   </script>
 </body>
