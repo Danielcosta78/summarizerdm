@@ -2,6 +2,10 @@
 
 SummarizerDM is a lightweight JavaScript library that transforms long texts into concise summaries. It's designed for easy integration via CDN and works entirely client-side.
 
+## Visit the website
+
+[https://summarizerdm.vercel.app/](https://summarizerdm.vercel.app/)
+
 ## Features
 
 - Adjustable summary length
