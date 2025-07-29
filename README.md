@@ -18,7 +18,7 @@ SummarizerDM is a lightweight JavaScript library that transforms long texts into
 Add this script to HTML:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/Danielcosta78/summarizerdm@main/cdn/summarizerdm.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Danielcosta78/summarizerdm@main/cdn/summarizerdm.1.2.2.js"></script>
 ```
 
 ## Basic Usage
@@ -103,7 +103,7 @@ licenseKey: 'YOUR_PURCHASED_KEY'
   <div id="summaryOutput">The summary will appear here...</div>
 
   <script
-    src="https://cdn.jsdelivr.net/gh/Danielcosta78/summarizerdm@main/cdn/summarizerdm.js">
+    src="https://cdn.jsdelivr.net/gh/Danielcosta78/summarizerdm@main/cdn/summarizerdm.1.2.2.js">
   </script>
   <script>
     Summarizer.initialize({
