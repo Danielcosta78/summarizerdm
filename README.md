@@ -26,7 +26,7 @@ Add this script to HTML:
 1. Add the required HTML elements:
 ```html
 <textarea id="textInput">Paste your text here...</textarea>
-<input type="range" id="summaryLevel" min="10" max="90" value="20" step="10">
+<input type="range" id="summaryLevel" min="1" max="20" value="20" step="1">
 <button id="summarizeBtn">Summarize</button>
 <div id="summaryOutput"></div>
 ```
@@ -95,7 +95,7 @@ licenseKey: 'YOUR_PURCHASED_KEY'
   <textarea id="textInput" rows="10" placeholder="Paste a long text here..."></textarea>
 
   <label for="summaryLevel">Summary level (% of original): <span id="percentLabel">20</span>%</label>
-  <input type="range" id="summaryLevel" min="10" max="90" value="20" step="10" 
+  <input type="range" id="summaryLevel" min="1" max="20" value="20" step="1" 
          oninput="document.getElementById('percentLabel').textContent = this.value">
 
   <button id="summarizeBtn">Summarize</button>
